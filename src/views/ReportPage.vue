@@ -7,11 +7,7 @@ import type { Report } from '@/types'
 
 const route = useRoute()
 const report = computed(() => {
-  const found = reports.find((r: Report) => r.id === route.params.id)
-  console.log('ReportPage - Looking for ID:', route.params.id)
-  console.log('ReportPage - Found report:', found)
-  console.log('ReportPage - Available reports:', reports.map(r => r.id))
-  return found
+  return reports.find((r: Report) => r.id === route.params.id)
 })
 </script>
 
